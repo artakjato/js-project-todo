@@ -3,12 +3,14 @@ import React from "react";
 
 export const Add = () => {
   const [todoValue, setTodoValue] = React.useState("");
-  const { addTodo } = useToDoStore((state) => ({ state }));
+  const addTodo = useToDoStore((state) => state.addTodo);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const todoText = e.target[0].value;
+    if (todoText.length === 0) return;
     addTodo(todoText);
+    setTodoValue("");
   };
 
   return (

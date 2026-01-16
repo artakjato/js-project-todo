@@ -4,7 +4,7 @@ import { ToDoList } from "./components/List.jsx";
 export const App = () => {
   return (
     <>
-      <h1>React Boilerplate</h1>
+      <h1>My To-do List</h1>
       <Add />
       <ToDoList />
     </>

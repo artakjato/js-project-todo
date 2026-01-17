@@ -14,7 +14,7 @@ export const ToDoList = () => {
         <p>
           Total: {totalCount} | Uncompleted: {uncompletedCount}
         </p>
-        <img src="../public/notodo.jpg" hidden={totalCount > 0} alt="No To-Do's today"/>
+        <img src="/notodo.jpg" hidden={totalCount > 0} alt="No To-Do's today"/>
       </div>
       <ol>
         {todos.map((todo) => (
@@ -32,12 +32,13 @@ export const ToDoList = () => {
               type="checkbox"
               checked={todo.completed}
               onChange={() => completeTodo(todo.id)}
+              aria-label={`Mark "${todo.text}" as ${todo.completed ? "incomplete" : "complete"}`}
             />
             <button onClick={() => deleteTodo(todo.id)}>Delete</button>
           </li>
 
         ))}
-        ,
+        
       </ol>
     </>
   );

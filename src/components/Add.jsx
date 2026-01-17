@@ -7,7 +7,7 @@ export const Add = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const todoText = e.target[0].value;
+    const todoText = todoValue.trim();
     if (todoText.length === 0) return;
     addTodo(todoText);
     setTodoValue("");
@@ -16,6 +16,10 @@ export const Add = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="new-todo" className="sr-only">
+          Add a new task
+        </label>
+
         <input
           type="text"
           id="new-todo"

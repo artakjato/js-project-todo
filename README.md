@@ -20,5 +20,3 @@ src/components/List.jsx is responsible for rendering the task list, counters, an
 src/store/useToDoStore.jsx manages global state using Zustand, 
 and src/index.css contains global styling and responsive layout rules.
 
-To run the project locally, install dependencies with npm install, start the development server with npm run dev, 
-build the project using npm run build, and preview the production build with npm run preview.
